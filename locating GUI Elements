@@ -1,0 +1,32 @@
+package org.myDemo3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+
+				
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Thasin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://github.com/login");
+	WebElement element;
+	
+	element=driver.findElement(By.name("login"));
+	element.sendKeys("tah786");
+	//element=driver.findElement(By.id("login_field"));
+	//element.sendKeys("tahsintaj3100@gmail.com");
+	element=driver.findElement(By.name("password"));
+	element.sendKeys("9535583100tasu");
+	element=driver.findElement(By.name("commit"));
+	element.click();	
+	//	System.out.println("title of the page:"+driver.getTitle());
+	//	System.out.println("Source of the page:"+driver.getPageSource());
+	//	System.out.println("URL of the page:"+driver.getCurrentUrl());
+		//System.out.println("Driver URL:"+driver.getClass());
+	}
+
+}
