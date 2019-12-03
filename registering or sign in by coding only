@@ -1,0 +1,44 @@
+package org.myDemo3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Thasin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://newtours.demoaut.com/mercuryregister.php?osCsid=8c35e5d497a399f078669e684532e474");
+		
+	WebElement element;
+	element=driver.findElement(By.name("firstName"));
+	element.sendKeys("Mohammed Sameer");
+	element=driver.findElement(By.name("lastName"));
+	element.sendKeys("Pasha");
+	element=driver.findElement(By.name("phone"));
+	element.sendKeys("9663203422");
+	element=driver.findElement(By.cssSelector("input#userName"));
+	element.sendKeys("mohammedsameerpasha200@gmail.com");
+	element=driver.findElement(By.name("address1"));
+	element.sendKeys("#8/1,5th main 1st cross padrayana pura bangalore 560026");
+	element=driver.findElement(By.name("city"));
+	element.sendKeys("Bangalore");
+	element=driver.findElement(By.name("country"));
+	element.sendKeys("India");
+	element=driver.findElement(By.name("email"));
+	element.sendKeys("hi");
+	element=driver.findElement(By.name("password"));
+	element.sendKeys("hello234");
+	element=driver.findElement(By.name("confirmPassword"));
+	element.sendKeys("hello234");
+	element=driver.findElement(By.name("register"));
+	element.click();
+	
+	
+	
+
+	}
+
+}
