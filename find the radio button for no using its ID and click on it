@@ -1,0 +1,22 @@
+package org.myDemo3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Thasin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demo.guru99.com/test/ajax.html");
+		//find the radio button for no using its ID and click on it
+		driver.findElement(By.id("no")).click();
+		//driver.findElement(By.id("yes")).click();
+		//click on check Button
+		driver.findElement(By.id("buttoncheck")).click();
+		//WebElement element;
+	}
